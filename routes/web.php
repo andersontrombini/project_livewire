@@ -15,7 +15,7 @@ use App\Http\Livewire\{
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('tweets', ShowTweets::class);
+Route::get('tweets', ShowTweets::class)->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
